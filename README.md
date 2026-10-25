@@ -187,9 +187,9 @@ Quiet TV runs on Google TV and Android TV: TCL, Sony, Hisense, Philips, Xiaomi, 
 
 | What | Where |
 |---|---|
-| Apps to turn off | `DEBLOAT` in [`HomeMode.java`](app/src/io/freemytv/HomeMode.java) |
+| Apps to turn off | `DEBLOAT` in [`HomeMode.java`](app/src/io/quiettv/HomeMode.java) |
 | Apps never to touch | `PROTECTED` in the same file |
-| Apps on the shelf | `SHELF` in [`HomeApps.java`](app/src/io/freemytv/HomeApps.java) |
+| Apps on the shelf | `SHELF` in [`HomeApps.java`](app/src/io/quiettv/HomeApps.java) |
 | Your brand's live TV app | `LIVE_TV_APPS` in the same file |
 
 ## Make it yours
@@ -212,17 +212,17 @@ It's your code, and Claude Code finds its way around it. Try:
 
 | File | What it is |
 |---|---|
-| [`HomeView.java`](app/src/io/freemytv/HomeView.java) | The home screen |
-| [`HomeMode.java`](app/src/io/freemytv/HomeMode.java) | Switching between Quiet TV and Original |
-| [`Adb.java`](app/src/io/freemytv/Adb.java) | The TV's own ADB, from inside the TV |
-| [`Recs.java`](app/src/io/freemytv/Recs.java) | The picks (TMDB) |
-| [`HomeData.java`](app/src/io/freemytv/HomeData.java) | Weather and prices |
-| [`HomeApps.java`](app/src/io/freemytv/HomeApps.java) | The shelf, inputs and All Apps |
-| [`DreamView.java`](app/src/io/freemytv/DreamView.java) | The screensaver |
-| [`SettingsActivity.java`](app/src/io/freemytv/SettingsActivity.java) | The settings screen (the app's icon) |
-| [`Prefs.java`](app/src/io/freemytv/Prefs.java) | Settings changed on the TV |
-| [`RemoteKeys.java`](app/src/io/freemytv/RemoteKeys.java) | The remote's app buttons (TCL, Sony, Xiaomi and others) |
-| [`Watchdog.java`](app/src/io/freemytv/Watchdog.java) | The safety net |
+| [`HomeView.java`](app/src/io/quiettv/HomeView.java) | The home screen |
+| [`HomeMode.java`](app/src/io/quiettv/HomeMode.java) | Switching between Quiet TV and Original |
+| [`Adb.java`](app/src/io/quiettv/Adb.java) | The TV's own ADB, from inside the TV |
+| [`Recs.java`](app/src/io/quiettv/Recs.java) | The picks (TMDB) |
+| [`HomeData.java`](app/src/io/quiettv/HomeData.java) | Weather and prices |
+| [`HomeApps.java`](app/src/io/quiettv/HomeApps.java) | The shelf, inputs and All Apps |
+| [`DreamView.java`](app/src/io/quiettv/DreamView.java) | The screensaver |
+| [`SettingsActivity.java`](app/src/io/quiettv/SettingsActivity.java) | The settings screen (the app's icon) |
+| [`Prefs.java`](app/src/io/quiettv/Prefs.java) | Settings changed on the TV |
+| [`RemoteKeys.java`](app/src/io/quiettv/RemoteKeys.java) | The remote's app buttons (TCL, Sony, Xiaomi and others) |
+| [`Watchdog.java`](app/src/io/quiettv/Watchdog.java) | The safety net |
 | [`web/home.js`](web/home.js) | The home screen on LG TVs |
 | [`web/tv.js`](web/tv.js) | The TV's apps and inputs, on LG and Samsung |
 | [`webos/build.py`](webos/build.py), [`webos/install.py`](webos/install.py) | The LG app package and its install |
