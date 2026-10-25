@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Writes docs/webos/apps.json, the repository the webOS Homebrew Channel reads (https://freemytv.io/webos/apps.json).
 
-    python3 tools/homebrew_repo.py FreeMyTV-webos.ipk
+    python3 tools/homebrew_repo.py QuietTV-webos.ipk
 
 Run it at release time, on the exact .ipk uploaded to the GitHub release (built with `webos/build.py --generic`), and
 commit the JSON with the release: the Channel downloads `ipkUrl`, checks this SHA-256 and size, and installs it with
@@ -16,7 +16,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'docs', 'webos', 'apps.json')
 ICON = 'https://freemytv.io/assets/icon-512.png'
-SOURCE = 'https://github.com/simbasjungles/free-my-tv'
+SOURCE = 'https://github.com/simbasjungles/quiettv'
 
 
 def write(sha256, size):
@@ -32,7 +32,7 @@ def write(sha256, size):
         'iconUri': ICON,
         'sourceUrl': SOURCE,
         'rootRequired': False,
-        'ipkUrl': f'{SOURCE}/releases/download/v{version}/FreeMyTV-webos.ipk',
+        'ipkUrl': f'{SOURCE}/releases/download/v{version}/QuietTV-webos.ipk',
         'ipkHash': {'sha256': sha256},
         'ipkSize': size,
     }

@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="docs/assets/icon-512.png" width="96" alt="">
+  <img src="docs/assets/icon-512.jpg" width="96" alt="">
 
   # Quiet TV
 
@@ -10,7 +10,7 @@
 
   [**quiet-tv.io**](https://quiet-tv.io) · [Install](#install) · [LG TVs](#lg-tvs-webos) · [Samsung TVs](#samsung-tvs-tizen) · [Any TV](#any-tv) · [Make it yours](#make-it-yours)
 
-  <img src="docs/assets/Screenshot 2026-10-25 120338.png" width="880" alt="Quiet TV on a TV, as it looks in practice">
+  <img src="docs/assets/screenshot-new.png" width="880" alt="Quiet TV on a TV, as it looks in practice">
 
 </div>
 
@@ -108,7 +108,7 @@ You need a Samsung TV from 2017 or newer (Tizen 3+) and a computer on the same W
 
 1. **On the TV**, open **Apps** and type `1 2 3 4 5` on the remote. Turn **Developer mode** on, type your computer's IP address in **Host PC IP**, and restart the TV.
 2. **On your computer**, download [TizenBrew Installer](https://github.com/reisxd/TizenBrewInstaller/releases/latest), the community's installer for Samsung TVs, open it and connect to your TV.
-3. **Install from GitHub:** type `simbasjungles/free-my-tv`. On 2023 and newer TVs it asks you to sign in to your Samsung account once, to sign the app for your TV.
+3. **Install from GitHub:** type `heyitsyajat/quiet-tv`. On 2023 and newer TVs it asks you to sign in to your Samsung account once, to sign the app for your TV.
 4. **Straight to it:** in the TV's settings, under Start Screen Options, turn on **Autorun Last App**: the TV turns on into Quiet TV.
 
 This build takes your city from the TV's time zone. For your exact city and the trending picks, build it with your own `config.properties` and [TMDB key](#the-tmdb-key): open the folder in Claude Code and say *"Install Quiet TV on my Samsung TV at 192.168.1.50. I live in Lisbon."* It sets up Samsung's tools, and on 2023 and newer TVs you sign in to your Samsung account in the browser to make the certificate. Your signed build installs with `python3 tizen/install.py 192.168.1.50`, which needs only Python: no Tizen Studio, and no Rosetta on Apple Silicon Macs.
@@ -271,5 +271,4 @@ No accounts, no analytics, no tracking. The app talks to TMDB, Open-Meteo (with 
 
 [MIT](LICENSE). Fork it, change it, ship it.
 <p align="center">
-Made by <strong>yajat</strong> — a fork of <a href="https://github.com/heyitsyajat/free-my-tv">Quiet TV</a> by the original developer. Mainly focused on fixing bugs in webOS TV support and stability improvements.
 </p>

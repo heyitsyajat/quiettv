@@ -1,10 +1,10 @@
 {
-  "id": "io.freemytv",
+  "id": "io.quiettv",
   "version": "1.1.0",
-  "vendor": "Free My TV",
+  "vendor": "Quiet TV",
   "type": "web",
   "main": "index.html",
-  "title": "Free My TV",
+  "title": "Quiet TV",
   "icon": "icon.png",
   "largeIcon": "largeIcon.png",
   "iconColor": "#FF7A9E",

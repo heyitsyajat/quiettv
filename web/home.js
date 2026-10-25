@@ -263,16 +263,18 @@
       for (var i = 0; i < chosen.length; i++) {
         for (var j = 0; j < apps.length; j++) if (apps[j].id === chosen[i]) out.push(apps[j]);
       }
+      // Add any apps not in the custom shelf at the end, sorted alphabetically
+      var customIds = chosen.slice();
+      var remaining = apps.filter(function (a) { return customIds.indexOf(a.id) < 0; });
+      remaining.sort(function (x, y) { return x.title.toLowerCase() < y.title.toLowerCase() ? -1 : 1; });
+      out = out.concat(remaining);
     } else {
-      for (var s = 0; s < SHELF.length && out.length < FEW_APPS; s++) {
-        for (var a = 0; a < apps.length; a++) {
-          if ((SHELF[s][1].test(apps[a].id) || SHELF[s][2].test(apps[a].title)) && out.indexOf(apps[a]) < 0) { out.push(apps[a]); break; }
-        }
-      }
-      if (!out.length) out = apps.slice(0, FEW_APPS);
+      // Show all installed apps, sorted alphabetically by title
+      out = apps.slice().sort(function (x, y) { return x.title.toLowerCase() < y.title.toLowerCase() ? -1 : 1; });
     }
     shelf = out;
-    others = apps.filter(function (x) { return shelf.indexOf(x) < 0; });
+    // Keep all apps in 'others' too, so the "All Apps" sheet still works as a grid view
+    others = apps.slice();
   }
 
   // MARK: - Focus
@@ -1160,5 +1162,5 @@
   }, 30000);
 
   // For the browser preview and tests.
-  window.FreeMyTV = {state: st, move: move, activate: activate, back: back, showSaver: showSaver, hideSaver: hideSaver, toast: toast};
+  window.QuietTV = {state: st, move: move, activate: activate, back: back, showSaver: showSaver, hideSaver: hideSaver, toast: toast};
 })();

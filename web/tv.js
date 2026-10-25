@@ -33,7 +33,7 @@ var TV = (function () {
     bridge.call(uri, JSON.stringify(params || {}));
   }
 
-  // LG's own screensaver asks every subscribed app first. While Free My TV is on screen and its own screensaver will
+  // LG's own screensaver asks every subscribed app first. While Quiet TV is on screen and its own screensaver will
   // take over (`hold`, from home.js), it says no; otherwise, and in the background, the TV's runs as before.
   var saverBridge = null;
 
@@ -188,7 +188,7 @@ var TV = (function () {
     });
   }
 
-  var self = 'io.freemytv';
+  var self = 'io.quiettv';
   if (webos && window.PalmSystem && window.PalmSystem.identifier) self = window.PalmSystem.identifier.split(' ')[0];
   if (samsung) {
     try { self = window.tizen.application.getCurrentApplication().appInfo.id; } catch (e) {}
